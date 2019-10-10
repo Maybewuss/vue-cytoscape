@@ -42,18 +42,24 @@ export default {
     },
     updateNode (event) {
       if (event.target.id) {
-        const n = {
-          data: { id: event.target.id(), shape: 'rectangle' },
-          position: event.target.position(),
-          group: 'nodes'
-        }
-        console.log('updating: ', n)
-        const elements = [
-          ...this.elements.filter(e => e.data.id !== event.target.id()),
-          n
-        ]
-        console.log('filtered elements: ', elements)
-        this.elements = elements
+        // event.target.style({shape:'rectangle'})
+        event.target.classes('customClass')
+        // console.log('event',event)
+        // const n = {
+        //   data: { id: event.target.id()}, 
+        //   'style':{shape: 'rectangle'},
+        //   position: event.target.position(),
+        //   group: 'nodes'
+        // }
+        // // removeNode(event)
+        // console.log('updating: ', n)
+        // const elements = [
+        //   ...this.elements.filter(e => e.data.id !== event.target.id()),
+        //   n
+        // ]
+        // console.log('filtered elements: ', elements)
+        // this.elements = elements
+        console.log(event.cy)
       }
     },
     removeNode (event) {

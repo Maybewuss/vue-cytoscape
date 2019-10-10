@@ -33,6 +33,7 @@ const config = {
     {
       selector: 'edge',
       style: {
+        conetent:'data(name)',
         'curve-style': 'bezier',
         'target-arrow-shape': 'triangle'
       }
@@ -67,7 +68,7 @@ const config = {
       selector: '.eh-target',
       style: {
         'border-width': 2,
-        'border-color': 'red'
+        'border-color': 'green'
       }
     },
     {

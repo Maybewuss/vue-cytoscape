@@ -44,12 +44,12 @@ export default {
       console.log("calling pre-config");
     },
     afterCreated(cy) {
-      console.log("after created");
+      console.log("after created",cy);
       cy.on("dragfree", "node", evt => this.setCyElements(cy));
       this.setCyElements(cy);
     },
     setCyElements(cy) {
-      console.log("setCyElements");
+      console.log("setCyElements",cy);
       let cytoElems = [
         {
           // node a
@@ -66,7 +66,7 @@ export default {
           data: { id: "ab", source: "a", target: "b" }
         }
       ];
-
+      console.log(cy)
       cy.startBatch();
       cy.elements().remove();
       for (let el of cytoElems) {
@@ -81,8 +81,8 @@ export default {
 
 <style>
 #holder {
-  width: 600px;
-  height: 600px;
+  width: 1000px;
+  height: 1000px;
   border: 1px red solid;
 }
 #app {

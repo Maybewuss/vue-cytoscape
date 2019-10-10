@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     addNode (event) {
+      
       const { position } = event
       const n = {
         group: 'nodes',
@@ -44,6 +45,7 @@ export default {
       this.elements = [...this.elements, n]
     },
     updateNode (event) {
+      console.log(event)
       if (event.target.id) {
         const n = {
           data: { id: event.target.id(), shape: 'rectangle' },

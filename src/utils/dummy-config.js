@@ -36,6 +36,13 @@ export default {
         'target-arrow-color': '#ccc',
         'target-arrow-shape': 'triangle'
       }
+    },
+    {
+      selector: '.customClass',
+      style: {
+      'background-color': 'red',
+      'shape': 'rectangle'
+      }
     }
   ],
   layout: {
